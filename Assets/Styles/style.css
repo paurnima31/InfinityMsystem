@@ -1,0 +1,1005 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+  /* border: 2px solid red; */
+}
+
+:root {
+  --primary-Color-Dark: black;
+  --border-Color: #a9a9a9;
+  --text-Color: #000;
+  --main-Background-Color: #f4f5fc;
+  --blue-Color: #005ce6c9;
+  --primary-Color-Light: #ffff;
+  --hover-Bg-Color: rgb(232, 232, 232);
+  --mp-Large: 30px;
+  --mp-Main: 15px;
+  --mp-Secondary: 10px;
+  --mp-Tertiary: 5px;
+}
+
+::selection {
+  color: var(--primary-Color-Light);
+  background: var(--text-Color);
+}
+
+.mainSection {
+  padding: var(--mp-Main);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-Color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-Color);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-Color);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-Color);
+}
+
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--blue-Color);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+body {
+  background-color: var(--main-Background-Color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#mainSectionSmall {
+  height: 90vh;
+}
+
+#toastMessage{
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  background-color: red;
+  transform: translate(-50%, 0);
+  padding: var(--mp-Main);
+  border-radius: var(--mp-Tertiary);
+}
+
+/* --------------------------------- Box Shadow ---------------------------------*/
+
+.boxShadow1Hover:hover {
+  -webkit-box-shadow: 0px 0px 29px -15px black;
+  -moz-box-shadow: 0px 0px 29px -15px black;
+  box-shadow: 0px 0px 29px -15px black;
+}
+
+.boxShadow1 {
+  -webkit-box-shadow: 0px 0px 29px -15px black;
+  -moz-box-shadow: 0px 0px 29px -15px black;
+  box-shadow: 0px 0px 29px -15px black;
+}
+
+/* --------------------------------- Button ---------------------------------*/
+.btn {
+  padding: var(--mp-Tertiary) var(--mp-Main);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--mp-Tertiary);
+  background-color: var(--primary-Color-Dark);
+  color: var(--primary-Color-Light);
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  background-color: var(--primary-Color-Light);
+  color: var(--primary-Color-Dark);
+  border-color: var(--primary-Color-Dark);
+}
+
+.btn:active {
+  background-color: var(--primary-Color-Dark);
+  color: var(--primary-Color-Light);
+}
+
+.btnWhite {
+  background-color: var(--primary-Color-Light);
+  border: 1px solid var(--primary-Color-Dark);
+  color: var(--primary-Color-Dark);
+}
+
+.btnWhite:hover {
+  background-color: var(--primary-Color-Dark);
+  color: var(--primary-Color-Light);
+  border: 1px solid var(--primary-Color-Light);
+}
+
+.btnWhite:active {
+  background-color: var(--primary-Color-Light);
+  color: var(--primary-Color-Dark);
+}
+
+/* --------------------------------- Glass Morphism ---------------------------------*/
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* --------------------------------- Input Box ---------------------------------*/
+.inputBx {
+  border: 1px solid var(--border-Color);
+  border-radius: var(--mp-Tertiary);
+  outline: none;
+  padding: var(--mp-Secondary);
+  background-color: var(--primary-Color-Light);
+  width: 100%;
+}
+
+.inputBx:active {
+  border-color: var(--blue-Color);
+}
+
+.inputBx:focus {
+  border-color: var(--blue-Color);
+}
+
+.inputBx:hover {
+  border-color: var(--blue-Color);
+}
+
+.inputBxHalf {
+  width: 49% !important;
+}
+
+/* --------------------------------- Navbar ---------------------------------*/
+
+nav {
+  height: 65px;
+  padding: var(--mp-Main) var(--mp-Large);
+  border-bottom: 1px solid var(--border-Color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-Color-Light);
+  z-index: 100;
+}
+
+.navImg {
+  width: 35px;
+  border-radius: var(--mp-Secondary);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: var(--mp-Large);
+  border-radius: var(--mp-Tertiary);
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+  .navImg {
+    margin-bottom: var(--mp-Main);
+    align-self: flex-start;
+  }
+}
+
+/* --------------------------------- User Dashboard ---------------------------------*/
+
+.userDashBoardCardMainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: scroll;
+  margin-top: var(--mp-Main);
+}
+
+.userDashBoardCardMainDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.userDashBoardCard {
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  height: 230px;
+  border-radius: var(--mp-Tertiary);
+  overflow: hidden;
+  margin: var(--mp-Main);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.userDashBoardCard:hover {
+  z-index: 20;
+  height: 350px;
+}
+
+.userDashBoardCard:hover .userDashboardDescription {
+  -webkit-line-clamp: 5;
+}
+
+.userDashBoardCardOverlay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  padding: var(--mp-Main);
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff7e,
+    #b9b9b996,
+    #7777779c,
+    #303030e0,
+    #000000
+  );
+}
+
+.userDashBoardCardOverlay:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #6c6c6c7e,
+    #42424296,
+    #3636369c,
+    #000000e0,
+    #000000
+  );
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.userDashBoardCardOverlaySub1 {
+  opacity: 0;
+  width: 100%;
+}
+
+.userDashboardCardStarMainP {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userDashboardDescription {
+  margin-bottom: var(--mp-Main);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.userDashboardCardStar {
+  width: 25px;
+  margin-left: var(--mp-Tertiary);
+}
+
+.userDashBoardCardOverlaySub1ButtonDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userDashBoardCardOverlaySub1 * {
+  margin-bottom: var(--mp-Tertiary);
+}
+.userDashBoardCardOverlay:hover .userDashBoardCardOverlaySub1 {
+  opacity: 1;
+}
+
+.userDashBoardCardOverlay * {
+  color: var(--primary-Color-Light);
+}
+
+.userDashBoardCardOverlaySub2 {
+  width: 100%;
+}
+
+.userDashboardCardOverlayBottomDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userDashBoardCardBgImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.userDashboardBookingTimeDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userDashboardBookingTimeDiv form {
+  background-color: #fff;
+  padding: var(--mp-Large);
+  border-radius: var(--mp-Secondary);
+}
+
+.userDashboardBookingTimeDiv form p {
+  margin-bottom: var(--mp-Secondary);
+}
+
+.userDashboardBookingTimeDiv form input {
+  margin-bottom: var(--mp-Secondary);
+}
+
+.userDashboardBookingTimeDiv form:first-child {
+  margin-top: 0px;
+}
+
+.userBookingsMainDiv {
+  width: 100%;
+  margin-top: var(--mp-Large);
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: var(--mp-Main);
+}
+
+.userBookingCard {
+  padding: var(--mp-Main);
+  border-radius: var(--mp-Secondary);
+  border: 1px solid var(--border-Color);
+  background-color: var(--primary-Color-Light);
+  gap: var(--mp-Secondary);
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.userBookingCardDiv1,
+.userBookingCardDiv2,
+.userBookingCardDiv3 {
+  width: 100%;
+}
+
+.userBookingCardDiv1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.userBookingCardDiv2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: var(--mp-Main);
+}
+
+.userBookingCardDiv3 {
+  margin-top: var(--mp-Main);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.userBookingCardDiv3 p,
+.userBookingCardDiv3 select,
+.userBookingCardDiv3 input {
+  margin-bottom: var(--mp-Secondary);
+}
+
+.status {
+  align-self: flex-end;
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: var(--mp-Tertiary);
+  background-color: var(--primary-Color-Light) !important;
+}
+
+.userBookingRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  display: inline-flex;
+  margin-bottom: var(--mp-Main);
+}
+
+.userBookingRatingImg {
+  width: 25px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.Requested {
+  background-color: #ffeb3b;
+}
+
+.Accepted {
+  background-color: #4caf50;
+}
+
+.Finished {
+  background-color: #2196f3;
+}
+
+.Paid {
+  background-color: #4caf50;
+}
+
+.Rejected {
+  background-color: #f44336;
+}
+
+.UnPaid {
+  background-color: #ffeb3b;
+}
+
+.ChangedTime {
+  background-color: #ffeb3b;
+}
+
+/* --------------------------------- Login and Signup ---------------------------------*/
+
+.lsSection {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mp-Large);
+}
+
+.lsModal {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 700px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--border-Color);
+  border-radius: var(--mp-Main);
+}
+
+.lsModalSec1 {
+  padding: var(--mp-Main);
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-right: 1px solid var(--border-Color);
+  background-color: var(--primary-Color-Light);
+}
+
+.lsModalSec1:hover {
+  flex: 3;
+}
+
+.lsModalSec2 {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.lsModalSec2YelloBg {
+  background-color: #fff0d9;
+}
+
+.lsModalSec2 img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.lsModalLogoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.lsModalLogoDiv p {
+  margin-left: var(--mp-Secondary);
+}
+.lsModalLogo {
+  width: 80px;
+}
+
+.lsModalTermsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.lsModalTermsDiv a {
+  margin-left: var(--mp-Main);
+}
+
+.lsModelForm {
+  margin: var(--mp-Large) 0px var(--mp-Large) 0px;
+  width: 100%;
+  padding: 0px 60px;
+  overflow-y: scroll;
+}
+/* width */
+.lsModelForm::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.lsModelForm::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.lsModelForm::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.lsModelForm::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.lsModelForm input,
+.lsModelForm select,
+.lsModelForm button,
+.lsModelForm a {
+  margin-top: var(--mp-Main);
+}
+
+.lsModelForm a {
+  display: inline-block;
+  margin-right: var(--mp-Main);
+}
+
+.lsModelForm ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: var(--mp-Secondary);
+}
+
+.lsModelForm ul li:last-child {
+  margin-bottom: var(--mp-Main);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lsModelForm ul {
+  margin-top: var(--mp-Main);
+}
+
+.lsModelForm ul li h3 {
+  margin-right: var(--mp-Secondary);
+}
+
+.lsModelFormBottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 850px) {
+  .lsModalSec1 {
+    width: 100%;
+    border-right: none;
+  }
+  .lsModalSec2 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .lsModelForm {
+    padding: var(--mp-Secondary);
+  }
+}
+
+/* --------------------------------- Landing Page ---------------------------------*/
+
+.landingIndividualSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--mp-Large);
+  display: flex;
+  align-items: stretch;
+}
+
+.landingIndividualInnerMainDiv {
+  width: 100%;
+  min-height: 90%;
+  border-radius: var(--mp-Main);
+  padding: var(--mp-Large);
+  border: 1px solid var(--border-Color);
+}
+
+.landingDark {
+  background-color: var(--primary-Color-Dark);
+  border: 1px solid var(--primary-Color-Light);
+}
+
+.landingDark * {
+  color: var(--primary-Color-Light);
+}
+
+.landingLight {
+  background-color: var(--primary-Color-Light);
+}
+
+@media (max-width: 500px) {
+  .landingIndividualSection {
+    padding: var(--mp-Main);
+  }
+  .landingIndividualInnerMainDiv {
+    padding: var(--mp-Main);
+  }
+}
+
+/* --------------------------------- Home Page ---------------------------------*/
+
+.LPHome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LPHomeSubDiv1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  flex: 1;
+}
+
+.LPHomeSubDiv1 h3,
+.LPHomeSubDiv1 p {
+  margin-top: var(--mp-Main);
+}
+
+.LPHomeSubDiv2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex: 2;
+}
+
+.LPHomeSubDiv2 img {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 1000px) {
+  .LPHomeSubDiv1 {
+    flex: 1;
+  }
+  .LPHomeSubDiv2 {
+    flex: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .LPHome {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .LPHomeSubDiv1,
+  .LPHomeSubDiv2 {
+    flex: 0;
+  }
+}
+
+/* --------------------------------- About Page ---------------------------------*/
+
+.LPAbout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LPAboutSubDiv1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  flex: 1;
+}
+
+.LPAboutSubDiv1 p,
+.LPAboutSubDiv1 a {
+  margin-top: var(--mp-Main);
+}
+
+.LPAboutSubDiv2 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex: 2;
+}
+
+.LPAboutSubDiv2 img {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 1000px) {
+  .LPAboutSubDiv1 {
+    flex: 1;
+  }
+  .LPAboutSubDiv2 {
+    flex: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .LPAbout {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .LPAboutSubDiv1,
+  .LPAboutSubDiv2 {
+    flex: 0;
+  }
+}
+
+/* --------------------------------- Services Page ---------------------------------*/
+
+.LPServices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LPServicesSubDiv1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  flex: 1;
+}
+
+.LPServicesSubDiv1 p {
+  margin-top: var(--mp-Main);
+}
+
+.LPServicesSubDiv1 a {
+  margin-top: var(--mp-Large);
+}
+
+.LPServicesSubDiv1 a {
+  color: var(--text-Color);
+}
+
+.LPServicesSubDiv1 div {
+  margin-top: var(--mp-Large);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.LPServicesSubDiv1 span {
+  background-color: var(--primary-Color-Light);
+  width: 2px;
+  height: 25px;
+  margin: 7px 60px;
+}
+
+.LPServicesSubDiv2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex: 2;
+}
+
+.LPServicesSubDiv2 img {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 1000px) {
+  .LPServicesSubDiv1 {
+    flex: 1;
+  }
+  .LPServicesSubDiv2 {
+    flex: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .LPServices {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .LPServicesSubDiv1,
+  .LPServicesSubDiv2 {
+    flex: 0;
+  }
+}
+
+/* --------------------------------- Admin Section ---------------------------------*/
+
+.adminTableMainDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: scroll;
+  width: 100%;
+}
+
+/* width */
+.adminTableMainDiv::-webkit-scrollbar {
+  height: 7px;
+}
+
+/* Handle */
+.adminTableMainDiv::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.adminTableMainDiv::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.adminTableHeading {
+  margin-bottom: var(--mp-Main);
+}
+
+.adminTable {
+  border-collapse: collapse;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: var(--mp-Secondary);
+  width: 100%;
+  max-width: 100%;
+}
+
+.adminTable thead {
+  border-bottom: 1px solid var(--border-Color);
+  color: var(--primary-Color-Light);
+}
+
+.adminTable th {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--primary-Color-Light);
+  border-top: none;
+}
+
+.adminTable th:first-child {
+  border-left: none;
+}
+
+.adminTable th:last-child {
+  border-right: none;
+}
+
+.adminTable td {
+  padding: 1rem 2rem;
+  border: 1px solid var(--border-Color);
+}
+
+.adminTable .tableStatus span {
+  padding: 5px 15px;
+  border-radius: var(--mp-Tertiary);
+}
+
+.adminTable .tableStatus {
+  text-align: center;
+}
+
+.adminTable td:first-child {
+  border-left: none;
+}
+
+.adminTable td:last-child {
+  border-right: none;
+}
+
+.adminDashboardMainDiv button{
+  margin-bottom: var(--mp-Large);
+}
+
+.adminDashboardMainCardDiv{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--mp-Main);
+}
+
+.adminDashboardCard{
+  padding: var(--mp-Main);
+  border-radius: var(--mp-Tertiary);
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
